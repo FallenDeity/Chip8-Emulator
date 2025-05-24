@@ -1,11 +1,5 @@
-from src.logger import Logger
-
-
-def main() -> None:
-    """Main function to run the application."""
-    logs = Logger(name="application", file_logging=False)
-    logs.info("Hello, world!")
-
+from src.emulator import Window
 
 if __name__ == "__main__":
-    main()
+    window = Window(rom_path=r"roms\Pong [Paul Vervalin, 1990].ch8")
+    window.run()
